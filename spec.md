@@ -61,7 +61,7 @@ Running gdalinfo or GDALOpen() on such a cloud optimized GeoTIFF will retrieve a
 For files hosted on Amazon S3 storage, with non-public sharing rights, [/vsis3/](http://www.gdal.org/cpl__vsi_8h.html#a5b4754999acd06444bfda172ff2aaa16) can be used.
 
 How to check if a GeoTIFF has a cloud optimization internal organization ?
-The [validate_cloud_optimized_geotiff.py](https://svn.osgeo.org/gdal/trunk/gdal/swig/python/samples/validate_cloud_optimized_geotiff.py) script can be used to check that a (GeoTIFF) file follows the above described file structure
+The [validate_cloud_optimized_geotiff.py](https://github.com/OSGeo/gdal/blob/master/gdal/swig/python/samples/validate_cloud_optimized_geotiff.py) script can be used to check that a (GeoTIFF) file follows the above described file structure
 
 ```
 $ python validate_cloud_optimized_geotiff.py test.tif
