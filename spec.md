@@ -15,7 +15,7 @@ More formally, the structure of such a file is:
 
 * TIFF / BigTIFF signature
 * IFD ([Image File Directory](https://www.awaresystems.be/imaging/tiff/faq.html#q3) of full resolution image
-* Values of TIFF tags that don't fit inline in the IFD directory, such as TileOffsets?, TileByteCounts? and GeoTIFF keys
+* Values of TIFF tags that don't fit inline in the IFD directory, such as TileOffsets, TileByteCounts and GeoTIFF keys
 * Optional: IFD (Image File Directory) of first overview (typically subsampled by a factor of 2), followed by the values of its tags that don't fit inline
 * Optional: IFD (Image File Directory) of second overview (typically subsampled by a factor of 4), followed by the values of its tags that don't fit inline
 * ...
@@ -38,7 +38,7 @@ Given an input dataset in.tif with already generated internal or external overvi
 
 This will result in a images with tiles of dimension 256x256 pixel for main resolution, and 128x128 tiles for overviews.
 
-For an image of 4096x4096 with 4 overview levels, the 5 IFDs and their TileOffsets? and TileByteCounts? tag data fit into the first 6KB of the file.
+For an image of 4096x4096 with 4 overview levels, the 5 IFDs and their TileOffsets and TileByteCounts tag data fit into the first 6KB of the file.
 
 Note: for JPEG compression, the above method produce cloud optimized files only if using GDAL 2.2 
 (or a dev version >= r36879). For older versions, the IFD of the overviews will be written towards 
