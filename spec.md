@@ -34,7 +34,7 @@ More formally, the structure of such a file is:
 
 Given an input dataset in.tif with already generated internal or external overviews, a cloud optimized GeoTIFF can be generated with:
 
-gdal_translate in.tif out.tif -co TILED=YES -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW
+`gdal_translate in.tif out.tif -co TILED=YES -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW`
 
 This will result in a images with tiles of dimension 256x256 pixel for main resolution, and 128x128 tiles for overviews.
 
@@ -60,7 +60,7 @@ Running gdalinfo or GDALOpen() on such a cloud optimized GeoTIFF will retrieve a
 
 For files hosted on Amazon S3 storage, with non-public sharing rights, [/vsis3/](http://www.gdal.org/cpl__vsi_8h.html#a5b4754999acd06444bfda172ff2aaa16) can be used.
 
-How to check if a GeoTIFF has a cloud optimization internal organization ?
+### How to check if a GeoTIFF has a cloud optimization internal organization?
 The [validate_cloud_optimized_geotiff.py](https://github.com/OSGeo/gdal/blob/master/gdal/swig/python/samples/validate_cloud_optimized_geotiff.py) script can be used to check that a (GeoTIFF) file follows the above described file structure
 
 ```
