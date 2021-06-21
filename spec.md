@@ -8,7 +8,7 @@ whose internal organization is friendly for consumption by clients issuing [HTTP
 
 It contains at its beginning the metadata of the full resolution imagery, followed by the optional presence 
 of overview metadata, and finally the imagery itself. To make it friendly with streaming and progressive 
-rendering, we recommand starting with the imagery of the smallest overview and finishing with the imagery 
+rendering, we recommend starting with the imagery of the smallest overview and finishing with the imagery 
 of the full resolution level.
 
 More formally, the structure of such a file is:
