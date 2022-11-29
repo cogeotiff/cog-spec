@@ -11,7 +11,7 @@ of overview metadata, and finally the imagery itself. To make it friendly with s
 rendering, we recommend starting with the imagery of the smallest overview and finishing with the imagery 
 of the full resolution level.
 
-More formally, the structure of such a file is:
+More formally, the layout of such a file is:
 
 * TIFF / BigTIFF signature
 * IFD ([Image File Directory](https://www.awaresystems.be/imaging/tiff/faq.html#q3)) of full resolution image
@@ -24,6 +24,10 @@ More formally, the structure of such a file is:
 * ...
 * Optional: tile content of first overview level
 * Tile content of full resolution image.
+
+The IFDs shall be linked by the pointers (the offset of the first IFD in the file header and the offset of the next IFD in each IFD) so that the full resolution image is first, followed by the overviews.
+
+Each IFD representing an overview shall have the tag NewSubfileType (254) with a value of 1, indicating the "reduced resolution image" subfile type.
 
 ### Unspecified points
 
