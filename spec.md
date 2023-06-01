@@ -72,3 +72,10 @@ $ python
 import validate_cloud_optimized_geotiff.py
 validate_cloud_optimized_geotiff.validate('test.tif')
 ```
+or if gdal is installed
+```
+$ python
+from osgeo_utils.samples.validate_cloud_optimized_geotiff import validate
+warnings, errors, details = validate('test.tif', full_check=True)
+assert len(errors) == 0
+```
